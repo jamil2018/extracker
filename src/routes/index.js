@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import UserLayout from "../layout/UserLayout";
 import {
   Login,
   UserTeams,
@@ -16,16 +17,22 @@ const router = createBrowserRouter([
     element: <Login />,
   },
   {
-    path: "/profile",
-    element: <UserProfile />,
-  },
-  {
-    path: "/timeSheet",
-    element: <UserTimeSheet />,
-  },
-  {
-    path: "/teams",
-    element: <UserTeams />,
+    path: "/user",
+    element: <UserLayout />,
+    children: [
+      {
+        index: true,
+        element: <UserProfile />,
+      },
+      {
+        path: "timeSheet",
+        element: <UserTimeSheet />,
+      },
+      {
+        path: "teams",
+        element: <UserTeams />,
+      },
+    ],
   },
   {
     path: "/admin/profile",

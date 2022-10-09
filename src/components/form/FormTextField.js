@@ -14,13 +14,13 @@ const FormTextField = ({ label, ...props }) => {
         error={meta.touched && meta.error !== null}
       />
       {meta.touched && meta.error ? (
-        <Typography variant="subtitle" color={red[400]}>
+        <Typography variant="subtitle2" color={red[400]}>
           {meta.error}
         </Typography>
       ) : (
         <Typography
           sx={{ visibility: "hidden" }}
-          variant="caption"
+          variant="subtitle2"
           color={red[300]}
         >
           Error message

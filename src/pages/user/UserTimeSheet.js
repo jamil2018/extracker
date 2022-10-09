@@ -1,7 +1,7 @@
 const UserTimeSheet = () => {
   return (
     <>
-      <h1>User UserTimeSheet</h1>
+      <h1>User TimeSheet</h1>
     </>
   );
 };

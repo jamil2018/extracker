@@ -6,8 +6,10 @@ import {
   Grid,
   Typography,
   useTheme,
+  Link as MuiLink,
 } from "@mui/material";
 import { Form, Formik } from "formik";
+import { Link } from "react-router-dom";
 import * as Yup from "yup";
 import FormTextField from "../../components/form/FormTextField";
 
@@ -34,12 +36,12 @@ const Login = () => {
         <Card variant="outlined" sx={{ width: "20vw" }}>
           <CardContent>
             <Typography
-              variant="h5"
+              variant="h4"
               component="h1"
               textAlign="center"
               gutterBottom
             >
-              Login
+              Sign In
             </Typography>
             <Divider
               sx={{
@@ -70,6 +72,14 @@ const Login = () => {
                 </Button>
               </Form>
             </Formik>
+            <Divider
+              sx={{
+                margin: theme.spacing(3, 0),
+              }}
+            />
+            <MuiLink href="/reset" underline="none">
+              Forgot Password?
+            </MuiLink>
           </CardContent>
         </Card>
       </Grid>
