@@ -1,7 +1,9 @@
+import PageHeader from "../../components/userPage/PageHeader";
+
 const UserTimeSheet = () => {
   return (
     <>
-      <h1>User TimeSheet</h1>
+      <PageHeader title="Timesheet" />
     </>
   );
 };

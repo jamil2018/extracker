@@ -4,15 +4,14 @@ import {
   ListItemIcon,
   ListItemText,
 } from "@mui/material";
-import { Link } from "react-router-dom";
 
-const SidebarLink = ({ linkProps }) => {
+const SidebarAction = ({ actionProps }) => {
   return (
     <>
-      {linkProps.map((item) => {
+      {actionProps.map((item) => {
         return (
           <ListItem key={item.text} disablePadding>
-            <ListItemButton component={Link} to={item.url}>
+            <ListItemButton onClick={item.action}>
               <ListItemIcon>{item.icon}</ListItemIcon>
               <ListItemText primary={item.text} />
             </ListItemButton>
@@ -23,4 +22,4 @@ const SidebarLink = ({ linkProps }) => {
   );
 };
 
-export default SidebarLink;
+export default SidebarAction;

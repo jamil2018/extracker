@@ -1,4 +1,4 @@
-import { Box, TextField, Typography, useTheme } from "@mui/material";
+import { Box, Fade, TextField, Typography, useTheme } from "@mui/material";
 import { red } from "@mui/material/colors";
 import { useField } from "formik";
 
@@ -13,19 +13,11 @@ const FormTextField = ({ label, ...props }) => {
         {...props}
         error={meta.touched && meta.error !== null}
       />
-      {meta.touched && meta.error ? (
+      <Fade in={meta.touched && meta.error}>
         <Typography variant="subtitle2" color={red[400]}>
-          {meta.error}
+          {meta.error ? meta.error : "Error Message"}
         </Typography>
-      ) : (
-        <Typography
-          sx={{ visibility: "hidden" }}
-          variant="subtitle2"
-          color={red[300]}
-        >
-          Error message
-        </Typography>
-      )}
+      </Fade>
     </Box>
   );
 };

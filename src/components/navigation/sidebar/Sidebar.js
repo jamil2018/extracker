@@ -1,9 +1,20 @@
-import { Divider, Drawer, List, Toolbar } from "@mui/material";
+import {
+  Divider,
+  Drawer,
+  List,
+  Toolbar,
+  Typography,
+  useTheme,
+} from "@mui/material";
 import EventAvailableIcon from "@mui/icons-material/EventAvailable";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import GroupsIcon from "@mui/icons-material/Groups";
 import { Box } from "@mui/system";
 import SidebarLink from "./SidebarLink";
+import { Link } from "react-router-dom";
+import SidebarAction from "./SidebarAction";
+
+const drawerWidth = 240;
 
 const drawerLinks = [
   {
@@ -24,9 +35,10 @@ const drawerActions = [
     action: () => console.log("logout"),
   },
 ];
-const drawerWidth = 240;
 
 const Sidebar = () => {
+  const theme = useTheme();
+
   return (
     <>
       <Drawer
@@ -41,14 +53,27 @@ const Sidebar = () => {
         variant="permanent"
         anchor="left"
       >
-        <Toolbar />
+        <Toolbar>
+          <Typography
+            variant="h5"
+            sx={{
+              letterSpacing: theme.spacing(1),
+              textDecoration: "none",
+            }}
+            color={theme.palette.primary.main}
+            component={Link}
+            to="/user"
+          >
+            Extracker
+          </Typography>
+        </Toolbar>
         <Divider />
         <List>
           <SidebarLink linkProps={drawerLinks} />
         </List>
         <Box sx={{ marginTop: "auto" }}>
           <Divider />
-          <SidebarLink linkProps={drawerActions} />
+          <SidebarAction actionProps={drawerActions} />
         </Box>
       </Drawer>
     </>

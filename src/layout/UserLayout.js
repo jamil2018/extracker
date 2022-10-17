@@ -12,7 +12,6 @@ const UserLayout = () => {
     >
       <Sidebar />
       <Container maxWidth="xl">
-        <Toolbar />
         <Outlet />
       </Container>
     </Box>

@@ -1,7 +1,9 @@
+import PageHeader from "../../components/userPage/PageHeader";
+
 const UserTeams = () => {
   return (
     <>
-      <h1>UserTeams</h1>
+      <PageHeader title="Teams" />
     </>
   );
 };
