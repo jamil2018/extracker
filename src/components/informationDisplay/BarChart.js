@@ -20,14 +20,6 @@ ChartJS.register(
   Legend
 );
 
-// const labels = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
-
-// {
-//     label: "Hours Worked",
-//     data: [7.5, 8, 8.5, 6.5, 10.0],
-//     backgroundColor: "rgba(255, 99, 132, 0.5)",
-//   },
-
 const BarChart = ({ chartTitle, labels, datasets, legendPosition }) => {
   const theme = useTheme();
   const options = {
