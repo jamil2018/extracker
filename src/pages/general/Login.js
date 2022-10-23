@@ -9,9 +9,8 @@ import {
   Link as MuiLink,
 } from "@mui/material";
 import { Form, Formik } from "formik";
-import { Link } from "react-router-dom";
 import * as Yup from "yup";
-import FormTextField from "../../components/form/FormTextField";
+import { FormTextField } from "../../components";
 
 const Login = () => {
   const theme = useTheme();

@@ -1,4 +1,4 @@
-import PageHeader from "../../components/userPage/PageHeader";
+import { PageHeader } from "../../components";
 
 const UserTeams = () => {
   return (

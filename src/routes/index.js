@@ -3,12 +3,12 @@ import UserLayout from "../layout/UserLayout";
 import {
   Login,
   UserTeams,
-  UserProfile,
   UserTimeSheet,
   AdminProfile,
   AdminDashboard,
-  TeamsDashboard,
-  UsersDashboard,
+  UserDashboard,
+  AdminTeamsDashboard,
+  AdminUsersDashboard,
 } from "../pages";
 
 const router = createBrowserRouter([
@@ -22,7 +22,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <UserProfile />,
+        element: <UserDashboard />,
       },
       {
         path: "timeSheet",
@@ -44,11 +44,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/admin/teams",
-    element: <TeamsDashboard />,
+    element: <AdminTeamsDashboard />,
   },
   {
     path: "/admin/users",
-    element: <UsersDashboard />,
+    element: <AdminUsersDashboard />,
   },
 ]);
 

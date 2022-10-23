@@ -4,14 +4,14 @@ import {
   CardContent,
   Divider,
   Grid,
+  IconButton,
   Typography,
   useTheme,
 } from "@mui/material";
-import GridData from "../../components/informationDisplay/GridData";
-import { Subtitle } from "../../components/text/title/Subtitle";
-import PageHeader from "../../components/userPage/PageHeader";
+import { GridData, PageHeader, Subtitle } from "../../components";
+import BorderColorIcon from "@mui/icons-material/BorderColor";
 
-const UserProfile = () => {
+const UserDashboard = () => {
   const theme = useTheme();
   return (
     <>
@@ -25,8 +25,13 @@ const UserProfile = () => {
       </Subtitle>
       <Grid container sx={{ marginTop: theme.spacing(6) }}>
         <Grid item xs={4}>
-          <Card>
+          <Card variant="outlined">
             <CardContent>
+              <Grid container justifyContent="flex-end">
+                <IconButton>
+                  <BorderColorIcon color="primary" />
+                </IconButton>
+              </Grid>
               <Grid container justifyContent="center">
                 <Avatar
                   sx={{ width: theme.spacing(18), height: theme.spacing(18) }}
@@ -38,6 +43,7 @@ const UserProfile = () => {
                 sx={{ marginY: theme.spacing(2) }}
                 textAlign="center"
                 variant="h5"
+                color="primary"
               >
                 John Doe
               </Typography>
@@ -60,4 +66,4 @@ const UserProfile = () => {
   );
 };
 
-export default UserProfile;
+export default UserDashboard;

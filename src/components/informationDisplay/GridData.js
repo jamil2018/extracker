@@ -13,6 +13,7 @@ const GridData = ({ labels, values, spacing }) => {
                 variant="subtitle1"
                 textAlign="left"
                 sx={{ fontWeight: theme.typography.fontWeightBold }}
+                color="primary"
               >
                 {label}
               </Typography>
