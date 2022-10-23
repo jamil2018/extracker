@@ -10,6 +10,7 @@ const GridData = ({ labels, values, spacing }) => {
           <Box>
             {labels.map((label) => (
               <Typography
+                key={label}
                 variant="subtitle1"
                 textAlign="left"
                 sx={{ fontWeight: theme.typography.fontWeightBold }}
@@ -23,7 +24,7 @@ const GridData = ({ labels, values, spacing }) => {
         <Grid item>
           <Box>
             {values.map((value) => (
-              <Typography variant="subtitle1" textAlign="left">
+              <Typography key={value} variant="subtitle1" textAlign="left">
                 {value}
               </Typography>
             ))}
