@@ -8,12 +8,16 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
-import { GridData, PageHeader, Subtitle } from "../../components";
 import BorderColorIcon from "@mui/icons-material/BorderColor";
-import InfoCard from "../../components/informationDisplay/InfoCard";
-import BarChart from "../../components/informationDisplay/BarChart";
-import { WORKDAYS } from "../../constants/chartConstants";
-import { generateChartDataset } from "../../utils/chartUtils";
+import {
+  BarChart,
+  GridData,
+  InfoCard,
+  PageHeader,
+  Subtitle,
+} from "../../../components";
+import { WORKDAYS } from "../../../constants/chartConstants";
+import { generateChartDataset } from "../../../utils/chartUtils";
 
 const UserDashboard = () => {
   const theme = useTheme();

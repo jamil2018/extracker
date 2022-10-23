@@ -9,6 +9,8 @@ import {
   UserDashboard,
   AdminTeamsDashboard,
   AdminUsersDashboard,
+  UserDailyTimesheetView,
+  UserWeeklyTimesheetView,
 } from "../pages";
 
 const router = createBrowserRouter([
@@ -27,6 +29,16 @@ const router = createBrowserRouter([
       {
         path: "timeSheet",
         element: <UserTimeSheet />,
+        children: [
+          {
+            index: true,
+            element: <UserDailyTimesheetView />,
+          },
+          {
+            path: "weekly",
+            element: <UserWeeklyTimesheetView />,
+          },
+        ],
       },
       {
         path: "teams",
