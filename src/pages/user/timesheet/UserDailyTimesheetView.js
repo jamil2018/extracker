@@ -30,8 +30,8 @@ const UserDailyTimesheetView = () => {
       <Card variant="outlined">
         <CardContent sx={{ paddingX: theme.spacing(6) }}>
           <DailyTimesheetEntryCard
-            fromTime="10:00 AM"
-            toTime="11:00PM"
+            fromTime={new Date(2022, 10, 27, 9, 0)}
+            toTime={new Date(2022, 10, 27, 11, 30)}
             description="Morning scrum"
             editActionHandler={(id) => {
               editHandler(id);
@@ -39,8 +39,8 @@ const UserDailyTimesheetView = () => {
             deleteActionHandler={(id) => deleteHandler(id)}
           />
           <DailyTimesheetEntryCard
-            fromTime="11:00 AM"
-            toTime="12:00PM"
+            fromTime={new Date(2022, 10, 27, 9, 0)}
+            toTime={new Date(2022, 10, 27, 11, 0)}
             description="Meeting with product"
             editActionHandler={(id) => {
               editHandler(id);
@@ -48,8 +48,8 @@ const UserDailyTimesheetView = () => {
             deleteActionHandler={(id) => deleteHandler(id)}
           />
           <DailyTimesheetEntryCard
-            fromTime="12:00 PM"
-            toTime="03:00PM"
+            fromTime={new Date(2022, 10, 27, 9, 0)}
+            toTime={new Date(2022, 10, 27, 11, 0)}
             description="Develop feature X"
             editActionHandler={(id) => {
               editHandler(id);
