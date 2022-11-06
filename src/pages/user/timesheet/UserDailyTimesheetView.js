@@ -1,8 +1,7 @@
 import { Button, Card, CardContent, Grid, useTheme } from "@mui/material";
-import { Subtitle } from "../../../components";
+import { Subtitle, DataList } from "../../../components";
 import DailyTimesheetEntryCard from "../../../components/informationDisplay/DailyTimesheetEntryCard";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
-import DataList from "../../../components/lists/DataList";
 
 const UserDailyTimesheetView = () => {
   const theme = useTheme();
@@ -32,37 +31,35 @@ const UserDailyTimesheetView = () => {
         <CardContent sx={{ paddingX: theme.spacing(6) }}>
           <DataList
             emptyMessage="No tasks have been added for today yet"
-            listItems={
-              [
-                // <DailyTimesheetEntryCard
-                //   fromTime="10:00 AM"
-                //   toTime="11:00PM"
-                //   description="Morning scrum"
-                //   editActionHandler={(id) => {
-                //     editHandler(id);
-                //   }}
-                //   deleteActionHandler={(id) => deleteHandler(id)}
-                // />,
-                // <DailyTimesheetEntryCard
-                //   fromTime="11:00 AM"
-                //   toTime="12:00PM"
-                //   description="Meeting with product"
-                //   editActionHandler={(id) => {
-                //     editHandler(id);
-                //   }}
-                //   deleteActionHandler={(id) => deleteHandler(id)}
-                // />,
-                // <DailyTimesheetEntryCard
-                //   fromTime="12:00 PM"
-                //   toTime="03:00PM"
-                //   description="Develop feature X"
-                //   editActionHandler={(id) => {
-                //     editHandler(id);
-                //   }}
-                //   deleteActionHandler={(id) => deleteHandler(id)}
-                // />,
-              ]
-            }
+            listItems={[
+              <DailyTimesheetEntryCard
+                fromTime={new Date(2022, 11, 3, 10, 30)}
+                toTime={new Date(2022, 11, 3, 11, 30)}
+                description="Morning scrum"
+                editActionHandler={(id) => {
+                  editHandler(id);
+                }}
+                deleteActionHandler={(id) => deleteHandler(id)}
+              />,
+              <DailyTimesheetEntryCard
+                fromTime={new Date(2022, 11, 3, 12, 30)}
+                toTime={new Date(2022, 11, 3, 13, 0)}
+                description="Meeting with product"
+                editActionHandler={(id) => {
+                  editHandler(id);
+                }}
+                deleteActionHandler={(id) => deleteHandler(id)}
+              />,
+              <DailyTimesheetEntryCard
+                fromTime={new Date(2022, 11, 3, 14, 30)}
+                toTime={new Date(2022, 11, 3, 16, 0)}
+                description="Develop feature X"
+                editActionHandler={(id) => {
+                  editHandler(id);
+                }}
+                deleteActionHandler={(id) => deleteHandler(id)}
+              />,
+            ]}
           />
         </CardContent>
       </Card>

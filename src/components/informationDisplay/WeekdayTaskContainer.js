@@ -15,7 +15,7 @@ const WeekdayTaskContainer = ({ title, createHandler, children }) => {
         <Button
           variant="outlined"
           fullWidth
-          sx={{ marginBottom: theme.spacing(3) }}
+          sx={{ marginBottom: theme.spacing(2) }}
         >
           Add new task
         </Button>

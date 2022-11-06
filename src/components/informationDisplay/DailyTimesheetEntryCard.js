@@ -34,7 +34,7 @@ const DailyTimesheetEntryCard = ({
       <Grid container xs={2}>
         <AccessTimeIcon sx={{ marginRight: theme.spacing(0.5) }} />
         <Typography>
-          {convertTimeToLocaleString(fromTime)} -
+          {convertTimeToLocaleString(fromTime)} -{" "}
           {convertTimeToLocaleString(toTime)}
         </Typography>
       </Grid>
