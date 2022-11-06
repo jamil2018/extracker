@@ -9,6 +9,10 @@ import {
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import {
+  calcTimeDiffInHrs,
+  convertTimeToLocaleString,
+} from "../../utils/dateTimeUtils";
 import { memo } from "react";
 
 const DailyTimesheetEntryCard = ({
@@ -30,7 +34,8 @@ const DailyTimesheetEntryCard = ({
       <Grid container xs={2}>
         <AccessTimeIcon sx={{ marginRight: theme.spacing(0.5) }} />
         <Typography>
-          {fromTime} - {toTime}
+          {convertTimeToLocaleString(fromTime)} -
+          {convertTimeToLocaleString(toTime)}
         </Typography>
       </Grid>
       <Grid container xs={10}>
@@ -43,8 +48,14 @@ const DailyTimesheetEntryCard = ({
         >
           <CardContent>
             <Grid container justifyContent="space-around" alignItems="center">
-              <Grid item xs={9}>
-                {description}
+              <Grid container direction="column" item xs={9}>
+                <Typography variant="body1"> {description}</Typography>
+                <Typography
+                  variant="subtitle2"
+                  sx={{ marginTop: theme.spacing(4) }}
+                >
+                  {calcTimeDiffInHrs(fromTime, toTime)}h
+                </Typography>
               </Grid>
               <Grid container xs={3} justifyContent="flex-end">
                 <IconButton
