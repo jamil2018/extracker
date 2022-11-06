@@ -9,6 +9,7 @@ import {
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import { memo } from "react";
 
 const DailyTimesheetEntryCard = ({
   id,
@@ -76,4 +77,4 @@ const DailyTimesheetEntryCard = ({
   );
 };
 
-export default DailyTimesheetEntryCard;
+export default memo(DailyTimesheetEntryCard);

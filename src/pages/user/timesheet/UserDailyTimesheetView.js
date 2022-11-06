@@ -2,6 +2,7 @@ import { Button, Card, CardContent, Grid, useTheme } from "@mui/material";
 import { Subtitle } from "../../../components";
 import DailyTimesheetEntryCard from "../../../components/informationDisplay/DailyTimesheetEntryCard";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
+import DataList from "../../../components/lists/DataList";
 
 const UserDailyTimesheetView = () => {
   const theme = useTheme();
@@ -29,32 +30,39 @@ const UserDailyTimesheetView = () => {
       </Grid>
       <Card variant="outlined">
         <CardContent sx={{ paddingX: theme.spacing(6) }}>
-          <DailyTimesheetEntryCard
-            fromTime="10:00 AM"
-            toTime="11:00PM"
-            description="Morning scrum"
-            editActionHandler={(id) => {
-              editHandler(id);
-            }}
-            deleteActionHandler={(id) => deleteHandler(id)}
-          />
-          <DailyTimesheetEntryCard
-            fromTime="11:00 AM"
-            toTime="12:00PM"
-            description="Meeting with product"
-            editActionHandler={(id) => {
-              editHandler(id);
-            }}
-            deleteActionHandler={(id) => deleteHandler(id)}
-          />
-          <DailyTimesheetEntryCard
-            fromTime="12:00 PM"
-            toTime="03:00PM"
-            description="Develop feature X"
-            editActionHandler={(id) => {
-              editHandler(id);
-            }}
-            deleteActionHandler={(id) => deleteHandler(id)}
+          <DataList
+            emptyMessage="No tasks have been added for today yet"
+            listItems={
+              [
+                // <DailyTimesheetEntryCard
+                //   fromTime="10:00 AM"
+                //   toTime="11:00PM"
+                //   description="Morning scrum"
+                //   editActionHandler={(id) => {
+                //     editHandler(id);
+                //   }}
+                //   deleteActionHandler={(id) => deleteHandler(id)}
+                // />,
+                // <DailyTimesheetEntryCard
+                //   fromTime="11:00 AM"
+                //   toTime="12:00PM"
+                //   description="Meeting with product"
+                //   editActionHandler={(id) => {
+                //     editHandler(id);
+                //   }}
+                //   deleteActionHandler={(id) => deleteHandler(id)}
+                // />,
+                // <DailyTimesheetEntryCard
+                //   fromTime="12:00 PM"
+                //   toTime="03:00PM"
+                //   description="Develop feature X"
+                //   editActionHandler={(id) => {
+                //     editHandler(id);
+                //   }}
+                //   deleteActionHandler={(id) => deleteHandler(id)}
+                // />,
+              ]
+            }
           />
         </CardContent>
       </Card>

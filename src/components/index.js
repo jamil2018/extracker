@@ -8,3 +8,4 @@ export { default as PageHeader } from "./userPage/PageHeader";
 export { default as GridData } from "./informationDisplay/GridData";
 export { default as InfoCard } from "./informationDisplay/InfoCard";
 export { default as BarChart } from "./informationDisplay/BarChart";
+export { default as WeeklyTaskContainer } from "./informationDisplay/WeekdayTaskContainer";
