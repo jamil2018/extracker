@@ -10,4 +10,5 @@ export { default as InfoCard } from "./informationDisplay/InfoCard";
 export { default as BarChart } from "./informationDisplay/BarChart";
 export { default as WeeklyTaskContainer } from "./informationDisplay/WeekdayTaskContainer";
 export { default as WeeklyTimesheetEntryCard } from "./informationDisplay/WeeklyTimesheetEntryCard";
+export { default as WeeklyTimesheetHeader } from "./informationDisplay/WeeklyTimesheetHeader";
 export { default as DataList } from "./lists/DataList";

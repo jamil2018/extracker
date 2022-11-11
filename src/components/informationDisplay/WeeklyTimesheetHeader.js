@@ -11,7 +11,7 @@ const WeeklyTimesheetHeader = ({ date, taskCreationHandler }) => {
   const theme = useTheme();
   return (
     <>
-      <Card>
+      <Card variant="outlined">
         <CardContent>
           <Typography
             variant="h6"
