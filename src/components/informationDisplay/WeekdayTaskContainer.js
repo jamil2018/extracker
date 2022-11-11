@@ -1,26 +1,9 @@
-import { Button, Card, CardContent, Typography, useTheme } from "@mui/material";
+import { Card, CardContent } from "@mui/material";
 
-const WeekdayTaskContainer = ({ title, createHandler, children }) => {
-  const theme = useTheme();
+const WeekdayTaskContainer = ({ children }) => {
   return (
     <Card sx={{ width: "100%" }}>
-      <CardContent>
-        <Typography
-          variant="h6"
-          sx={{ marginBottom: theme.spacing(1) }}
-          textAlign="center"
-        >
-          Monday
-        </Typography>
-        <Button
-          variant="outlined"
-          fullWidth
-          sx={{ marginBottom: theme.spacing(2) }}
-        >
-          Add new task
-        </Button>
-        {children}
-      </CardContent>
+      <CardContent>{children}</CardContent>
     </Card>
   );
 };

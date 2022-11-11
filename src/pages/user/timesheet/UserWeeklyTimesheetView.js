@@ -40,6 +40,7 @@ const UserWeeklyTimesheetView = () => {
                 createHandler={(day) => console.log(`creating task for ${day}`)}
               >
                 <DataList
+                  orientation="column"
                   emptyMessage="No entries"
                   listItems={[
                     <WeeklyTimesheetEntryCard

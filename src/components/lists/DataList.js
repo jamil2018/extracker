@@ -1,6 +1,6 @@
-import { Typography, useTheme } from "@mui/material";
+import { Grid, Typography, useTheme } from "@mui/material";
 
-const DataList = ({ emptyMessage, listItems }) => {
+const DataList = ({ emptyMessage, listItems, orientation }) => {
   const theme = useTheme();
   if (listItems.length === 0) {
     return (
@@ -15,7 +15,11 @@ const DataList = ({ emptyMessage, listItems }) => {
       </>
     );
   }
-  return <>{listItems.map((item) => item)}</>;
+  return (
+    <Grid direction={orientation} container>
+      {listItems.map((item) => item)}
+    </Grid>
+  );
 };
 
 export default DataList;
