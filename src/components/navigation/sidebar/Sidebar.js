@@ -23,9 +23,9 @@ const drawerLinks = [
     url: "/user/timesheet",
   },
   {
-    text: "Teams",
+    text: "Team",
     icon: <GroupsIcon />,
-    url: "/user/teams",
+    url: "/user/team",
   },
 ];
 const drawerActions = [

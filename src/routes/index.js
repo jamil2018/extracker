@@ -2,7 +2,6 @@ import { createBrowserRouter } from "react-router-dom";
 import UserLayout from "../layout/UserLayout";
 import {
   Login,
-  UserTeams,
   UserTimeSheet,
   AdminProfile,
   AdminDashboard,
@@ -11,6 +10,7 @@ import {
   AdminUsersDashboard,
   UserDailyTimesheetView,
   UserWeeklyTimesheetView,
+  UserTeam,
 } from "../pages";
 
 const router = createBrowserRouter([
@@ -41,8 +41,8 @@ const router = createBrowserRouter([
         ],
       },
       {
-        path: "teams",
-        element: <UserTeams />,
+        path: "team",
+        element: <UserTeam />,
       },
     ],
   },

@@ -1,6 +1,6 @@
 export { default as Login } from "./general/Login";
 export { default as UserDashboard } from "./user/dashboard/UserDashboard";
-export { default as UserTeams } from "./user/teams/UserTeams";
+export { default as UserTeam } from "./user/team/UserTeam";
 export { default as UserTimeSheet } from "./user/timesheet/UserTimeSheet";
 export { default as UserWeeklyTimesheetView } from "./user/timesheet/UserWeeklyTimesheetView";
 export { default as UserDailyTimesheetView } from "./user/timesheet/UserDailyTimesheetView";
