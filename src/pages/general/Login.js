@@ -7,7 +7,9 @@ import {
   Typography,
   useTheme,
   Link as MuiLink,
+  Toolbar,
 } from "@mui/material";
+import { Box, Container } from "@mui/system";
 import { Form, Formik } from "formik";
 import * as Yup from "yup";
 import { FormTextField } from "../../components";
@@ -24,61 +26,132 @@ const Login = () => {
   });
   return (
     <>
+      <Container maxWidth="xl">
+        <Toolbar>
+          <Typography
+            variant="h6"
+            sx={{
+              letterSpacing: theme.spacing(1),
+              textDecoration: "none",
+            }}
+            color={theme.palette.primary.main}
+          >
+            Extracker
+          </Typography>
+        </Toolbar>
+      </Container>
       <Grid
         container
         justifyContent="center"
         alignItems="center"
         sx={{
-          height: "80vh",
+          height: "90vh",
         }}
       >
-        <Card variant="outlined" sx={{ width: "20vw" }}>
-          <CardContent>
+        <Box
+          sx={{
+            width: "20vw",
+            height: "50vh",
+            borderTopLeftRadius: theme.shape.borderRadius,
+            borderBottomLeftRadius: theme.shape.borderRadius,
+          }}
+          bgcolor={theme.palette.primary.main}
+        >
+          <Grid
+            item
+            container
+            direction="column"
+            justifyContent="center"
+            alignItems="center"
+            sx={{ height: "inherit" }}
+          >
             <Typography
+              sx={{
+                letterSpacing: theme.spacing(1),
+                textDecoration: "none",
+              }}
               variant="h4"
-              component="h1"
+              color="white"
               textAlign="center"
               gutterBottom
             >
-              Sign In
+              Extracker
             </Typography>
-            <Divider
-              sx={{
-                marginBottom: theme.spacing(3),
-              }}
-            />
-            <Formik
-              initialValues={initialValues}
-              validationSchema={validationSchema}
+            <Typography
+              sx={{ letterSpacing: theme.spacing(0.2) }}
+              color="white"
+              variant="caption"
+              textAlign="center"
             >
-              <Form>
-                <FormTextField
-                  label="Username"
-                  name="username"
-                  type="text"
-                  size="small"
-                  fullWidth
+              Time tracking for professionals
+            </Typography>
+          </Grid>
+        </Box>
+        <Card variant="outlined" sx={{ width: "20vw", height: "50vh" }}>
+          <CardContent sx={{ height: "100%" }}>
+            <Grid
+              item
+              container
+              direction="column"
+              justifyContent="space-between"
+              sx={{ height: "100%" }}
+            >
+              <Box>
+                <Typography
+                  variant="h5"
+                  sx={{
+                    letterSpacing: theme.spacing(1),
+                    textDecoration: "none",
+                    marginBottom: theme.spacing(2),
+                  }}
+                  textAlign="left"
+                  color={theme.palette.primary.main}
+                >
+                  Sign in
+                </Typography>
+                <Divider
+                  sx={{
+                    marginBottom: theme.spacing(3),
+                  }}
                 />
-                <FormTextField
-                  label="Password"
-                  name="password"
-                  type="password"
-                  size="small"
-                  fullWidth
+              </Box>
+              <Box>
+                <Formik
+                  initialValues={initialValues}
+                  validationSchema={validationSchema}
+                >
+                  <Form>
+                    <FormTextField
+                      label="Username"
+                      name="username"
+                      type="text"
+                      size="small"
+                      fullWidth
+                    />
+                    <FormTextField
+                      label="Password"
+                      name="password"
+                      type="password"
+                      size="small"
+                      fullWidth
+                    />
+                    <Button variant="contained" type="submit" fullWidth>
+                      Submit
+                    </Button>
+                  </Form>
+                </Formik>
+              </Box>
+              <Box>
+                <Divider
+                  sx={{
+                    margin: theme.spacing(3, 0),
+                  }}
                 />
-                <Button variant="contained" type="submit" fullWidth>
-                  Submit
-                </Button>
-              </Form>
-            </Formik>
-            <Divider
-              sx={{
-                margin: theme.spacing(3, 0),
-              }}
-            />
-            <MuiLink href="/reset" underline="none">
-              Forgot Password?
-            </MuiLink>
+                <MuiLink href="/reset" underline="none">
+                  Forgot Password?
+                </MuiLink>
+              </Box>
+            </Grid>
           </CardContent>
         </Card>
       </Grid>
