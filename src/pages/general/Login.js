@@ -45,7 +45,7 @@ const Login = () => {
         justifyContent="center"
         alignItems="center"
         sx={{
-          height: "90vh",
+          height: "86vh",
         }}
       >
         <Box
@@ -155,6 +155,23 @@ const Login = () => {
           </CardContent>
         </Card>
       </Grid>
+      <Container maxWidth="xl">
+        <Toolbar>
+          <Grid container justifyContent="flex-end">
+            <Typography
+              variant="caption"
+              sx={{
+                letterSpacing: theme.spacing(0.5),
+                textDecoration: "none",
+              }}
+              color={theme.palette.primary.main}
+              textAlign="right"
+            >
+              copyright &copy;{new Date().getFullYear()} Extracker inc.
+            </Typography>
+          </Grid>
+        </Toolbar>
+      </Container>
     </>
   );
 };
