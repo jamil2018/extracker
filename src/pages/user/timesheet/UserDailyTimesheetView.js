@@ -117,7 +117,7 @@ const UserDailyTimesheetView = () => {
           <Box
             sx={{
               paddingX: theme.spacing(6),
-              maxHeight: "58vh",
+              maxHeight: "57.63vh",
               overflowY: "auto",
               "::-webkit-scrollbar": {
                 width: "5px",
